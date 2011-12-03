@@ -1,0 +1,87 @@
+.get-to-know-html5 .deck-container {
+  width: auto;
+  max-width: 1024px;
+  margin: 16px auto 24px auto;
+  height: 768px;
+  font-size: 18px;
+}
+.no-boxshadow .get-to-know-html5 .deck-container {
+  border: 1px solid #e4e4e4;
+}
+.boxshadow .get-to-know-html5 .deck-container {
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+ul li.nested-effect {
+	list-style-type: none;
+}
+
+.theme-menu {
+  display: none;
+  float: left;
+  color: #888;
+  border-left: 1px solid #555;
+  border-right: 1px solid #555;
+  line-height: 32px;
+  height: 32px;
+  font-family: sans-serif;
+  padding-right: 15px;
+  margin-left: 15px;
+}
+.js .theme-menu {
+  display: block;
+}
+.theme-menu label {
+  font-size: 12px;
+  vertical-align: baseline;
+  margin: 0 4px 0 15px;
+}
+
+span.year {
+	display: inline-block;
+	text-align: right;
+	width: 120px;
+	letter-spacing: -2px;
+	padding-right: 10px;
+}
+
+.tech-css {
+	background: -webkit-gradient(linear, left top, left bottom, from(#ff4), to(#ffa));
+	background-color: #ff4;
+	background: -moz-linear-gradient(left top, #ff4, #ffa);
+}
+.tech-js {
+	background: -webkit-gradient(linear, left top, left bottom, from(#4f4), to(#afa));
+	background-color: #4f4;
+	background: -moz-linear-gradient(left top, #4f4, #afa);
+}
+.tech-html {
+	background: -webkit-gradient(linear, left top, left bottom, from(#e88), to(#fee));
+	background-color: #e88;
+	background: -moz-linear-gradient(left top, #e88, #fee);
+}
+
+.code-container {
+	/* to coupe with CoderDeck */
+	background-color:#FFF;
+}
+
+.credit {
+	display: block;
+	float:right;
+	font-size: 0.8em;
+	font-style: italic
+}
+
+@media print {
+  header, footer {
+    display: none !important;
+  }
+
+  .get-to-know-html5ntroduction .deck-container {
+    font-size: 1.25em;
+  }
+}
+

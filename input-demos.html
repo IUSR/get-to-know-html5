@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Demo for HTML5 input controls</title>
+
+	<meta name="description" content="A demo on new HTML5 form input controls">
+	<meta name="author" content="Jerome Jia">
+	<meta name="viewport" content="width=1280, user-scalable=yes">
+
+	<style type="text/css">
+		form {
+			margin: 2em;
+		}
+		fieldset {
+			margin-top: 1em;
+		}
+		fieldset div {
+			margin: 2em;
+		}
+fieldset div label {
+size: 20;
+display: block;
+}
+		fieldset div input {
+			font-size: 1.1em;
+			height: 2em;
+		}
+	</style>
+	<script>
+		function control_update(control, valueHolder) {
+			document.getElementById(valueHolder).innerText = control.value;
+		}
+	</script>
+</head>
+
+<body>
+	<form>
+		<fieldset>
+			<legend>HTML5 Form Inputs</legend>
+			<div><label>Placeholder text demo</label><input type="text" size="80" placeholder="I'm the placeholder, just plain text, no fancy styling :("/></div>
+			<div><label>Placeholder text demo</label><textarea cols="80" rows="10" placeholder="I'm the placeholder, for a textarea, just plain text"/></textarea>
+			<div><label>Number input</label><input type="number" size="80" placeholder="Only numbers are allowed"/></div>
+			<div><label>Number input, [1, 100], step=2</label><input type="number" min=1 max=100 step=2 size="80" placeholder="Only numbers are allowed"/></div>
+			<div><label>Float Number input, [0, 10], step=0.1</label><input type="number" min=0 max=10 step=0.1 size="80" placeholder="Only numbers are allowed"/></div>
+			<div><label>Email input</label><input type="email" size="80" placeholder="You'll see an easy-to-reach '@'"/></div>
+			<div><label>URL input</label><input type="url" size="80" placeholder="Shortcuts for URLs"/></div>
+			<div><label>Search input</label><input type="search" size="80" placeholder="Clear-able input"/></div>
+			<div><label>Range picker</label><input type="range" onchange="control_update(this, 'range-val0')"/><label id="range-val0" style="display: inline;"></label></div>
+			<div><label>Range picker, [0, 1000], step 10</label><input type="range" min=0 max=1000 step=10 onchange="control_update(this, 'range-val1')"/><label id="range-val1" style="display: inline;"></label></div>
+			<div><label>Range picker, with defined options</label>
+				<input type="range" autocomplete="true" min=1 max=50 onchange="control_update(this, 'range-val2')" list="rangeData0"/>
+				<datalist id="rangeData0">
+					<option value="1"/>
+					<option value="2"/>
+					<option value="3"/>
+					<option value="5"/>
+					<option value="8"/>
+					<option value="13"/>
+					<option value="21"/>
+				</datalist>
+				<label id="range-val2" style="display: inline;"></label></div>
+			<div><label>Color picker</label><input type="color" size="80" placeholder="Just like a color picker" onchange="control_update(this, 'color-val0')"/><label id="color-val0"></label></div>
+		</fieldset>
+	</form>
+</body>
+</html>

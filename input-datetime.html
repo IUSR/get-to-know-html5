@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Demo for HTML5 input controls</title>
+
+	<meta name="description" content="A demo on new HTML5 form input controls">
+	<meta name="author" content="Jerome Jia">
+	<meta name="viewport" content="width=1280, user-scalable=yes">
+
+	<style type="text/css">
+		form {
+			margin: 2em;
+		}
+		fieldset {
+			margin-top: 1em;
+		}
+		fieldset div {
+			margin: 2em;
+		}
+fieldset div label {
+size: 20;
+display: block;
+}
+		fieldset div input {
+			font-size: 1.1em;
+			height: 2em;
+		}
+	</style>
+	<script>
+		function control_update(control, valueHolder) {
+			document.getElementById(valueHolder).innerText = control.value;
+		}
+	</script>
+</head>
+
+<body>
+	<form>
+		<fieldset>
+			<legend>Date/time input controls</legend>
+			<div><label></label><input type="date" size="80" placeholder="Only date"/></div>
+			<div><label></label><input type="month" size="80" placeholder="Only month"/></div>
+			<div><label></label><input type="week" size="80" placeholder="Only week"/></div>
+			<div><label></label><input type="time" size="80" placeholder="Only time"/></div>
+			<div><label></label><input type="datetime" size="80" placeholder="Date plus time"/></div>
+			<div><label></label><input type="datetime-local" size="80" placeholder="Date plus time, depend on locality"/></div>
+		</fieldset>
+	</form>
+</body>
+</html>

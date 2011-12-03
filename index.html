@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Getting to know HTML5</title>
+
+	<meta name="description" content="A demonstrative introduction to HTML5">
+	<meta name="author" content="Jerome Jia">
+	<meta name="viewport" content="width=1280, user-scalable=no">
+
+	<!-- {{{ Core and extension CSS files -->
+	<link rel="stylesheet" href="deck.js/core/deck.core.css">
+	<link rel="stylesheet" href="deck.js/extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="deck.js/extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="deck.js/extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="deck.js/extensions/status/deck.status.css">
+	<link rel="stylesheet" href="deck.js/extensions/hash/deck.hash.css">
+	<link rel="stylesheet" href="deck.js/extensions/coderdeck/coderdeck-core.min.css">
+	<link rel="stylesheet" href="deck.js/extensions/coderdeck/coderdeck.css">
+
+	<!-- Theme CSS files (menu swaps these out) -->
+	<link rel="stylesheet" id="style-theme-link" href="deck.js/themes/style/web-2.0.css">
+	<link rel="stylesheet" id="transition-theme-link" href="deck.js/themes/transition/horizontal-slide.css">
+
+	<!-- Custom CSS just for this page -->
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="css/common.css">
+
+	<script src="deck.js/modernizr.custom.js"></script>
+	<!-- }}} -->
+</head>
+
+<body class="get-to-know-html5">
+<!-- {{{ needed by CoderDeck -->
+<script type='text/coderdeck' id='coderdeck-default'>
+  <html>
+    <head>
+      <script src='jquery-1.7.min.js'>SCRIPTEND
+    </head>
+    <body>
+	    CODE
+    </body>
+</html>
+</script>
+<!-- }}} -->
+
+<!-- {{{ header -->
+<header>
+	<nav>
+		<h1>Getting to Know HTML5</h1>
+	</nav>
+</header>
+<!-- }}} -->
+
+<article class="deck-container">
+	<section class="slide" id="title-slide">
+		<h1>Getting to Know HTML5</h1>
+		<ul>
+			<li class="slide nested-effect">
+				<img src="imgs/web_technologies.png"/>
+			</li>
+		</ul>
+	</section>
+
+	<section class="slide" id="agenda">
+		<h2>Agenda</h2>
+		<ul>
+			<li>Emergence of HTML5</li>
+			<li>The Markup</li>
+			<li>JavaScript &amp; New APIs</li>
+			<li>CSS</li>
+			<li>Lucky Dogs</li>
+		</ul>
+	</section>
+
+	<!-- {{{ Emergence -->
+	<section class="slide" id="Emergence-of-html5-0">
+		<h2>Emergence of HTML5</h2>
+		<h3>Rough Timeline of Web Technologies</h3>
+		<ul class="slide">
+              <li><span class="year">1991</span> <span class="tech-html">HTML</span></li>
+              <li><span class="year">1994</span> <span class="tech-html">HTML 2</span></li>
+              <li><span class="year">1996</span> <span class="tech-css">CSS 1</span> + <span class="tech-js">JavaScript</span></li>
+              <li><span class="year">1997</span> <span class="tech-html">HTML 4</span></li>
+              <li><span class="year">1998</span> <span class="tech-css">CSS 2</span></li>
+              <li><span class="year">2000</span> <span class="tech-html">XHTML 1</span></li>
+	    </ul>
+		<ul class="slide">
+              <li><span class="year"><em class="stroke">2002</em></span> <span class="tech-css">Tableless Web Design</span></li>
+              <li><span class="year"><em class="stroke">2005</em></span> <span class="tech-js">AJAX</span></li>
+              <li><span class="year"><em class="stroke">2009</em></span> <span class="tech-html">HTML 5</span></li>
+		</ul>
+		<h3 class="slide">More: http://www.w3.org/html/wg/wiki/History</h3>
+	</section>
+
+	<section class="slide" id="Emergence-of-html5-1">
+		<h2>Emergence of HTML5</h2>
+		<h3>WHATWG</h3>
+		<div class="slide">
+			<p>Web Hypertext Applications Technology Working Group</p>
+			<blockquote style="font-size:1.3em">
+The Web Hypertext Application Technology Working Group (WHATWG) is a growing community of people interested in evolving the Web. It focuses primarily on the development of HTML and APIs needed for Web applications.
+The WHATWG was founded by individuals of Apple, the Mozilla Foundation, and Opera Software in 2004, after a W3C workshop. Apple, Mozilla and Opera were becoming increasingly concerned about the W3C’s direction with XHTML, lack of interest in HTML and apparent disregard for the needs of real-world authors. So, in response, these organisations set out with a mission to address these concerns and the Web Hypertext Application Technology Working Group was born.
+			</blockquote>
+		</div>
+	</section>
+	<section class="slide" id="Emergence-of-html5-2">
+		<h2>Emergence of HTML5</h2>
+		<h3>What is the WHATWG working on?</h3>
+		<blockquote style="font-size:1.3em">
+The WHATWG's main focus is the HTML standard, which also includes Web Workers, Web Storage, the Web Sockets API, and Server-Sent Events. Occasionally, specifications outside WHATWG space are discussed on the WHATWG mailing list; recent examples include a crypto API, HTML editing APIs, and the UndoManager specification.
+In the past it has worked on Web Forms 2.0 and Web Controls 1.0. Web Forms 2.0 has been integrated into HTML5 and Web Controls 1.0 has been abandoned for now, awaiting what XBL 2.0 or its alternatives will bring us.
+		</blockquote>
+		</div>
+	</section>
+	<section class="slide" id="Emergence-of-html5-3">
+		<h2>Emergence of HTML5</h2>
+		<h3>What is HTML5?</h3>
+		<blockquote style="font-size:1.3em">
+HTML is the main focus of the WHATWG community. HTML5 is a snapshot of HTML, which is being worked on by the WHATWG community and also the W3C HTML Working Group.
+HTML5 is a new version of HTML4, XHTML1, and DOM Level 2 HTML addressing many of the issues of those specifications while at the same time enhancing (X)HTML to more adequately address Web applications. Besides defining a markup language that can be written in both HTML and XML (XHTML) it also defines many APIs that form the basis of the Web architecture. Some of these APIs were known as "DOM Level 0" and were never documented before. Yet they are extremely important for browser vendors to support existing Web content and for authors to be able to build Web applications.
+Going forward, the WHATWG is just working on "HTML", without worrying about version numbers. When people talk about HTML5 in the context of the WHATWG, they usually mean just "the latest work on HTML", not necessarily a specific version.
+		</blockquote>
+		<blockquote class="slide" style="font-size:1.3em">
+			Living Standards
+		</blockquote>
+	</section>
+	<section class="slide" id="Emergence-of-html5-4">
+		<h2>Emergence of HTML5</h2>
+		<h3>WHATWG HTML Spec</h3>
+		<iframe src="http://www.whatwg.org/specs/web-apps/current-work/multipage/" width="1000" height="500" frameborder="0"></iframe>
+	</section>
+	<section class="slide" id="Emergence-of-html5-5">
+		<h2>Emergence of HTML5</h2>
+		<h3>W3C HTML Spec</h3>
+		<span style="float:left">
+			<iframe src="http://www.w3.org/TR/html5/" width="1000" height="500" frameborder="0"></iframe>
+		</span>
+		<!--
+		<span style="float:right">
+			<iframe src="http://dev.w3.org/html5/spec/Overview.html" width="500" height="500" frameborder="0"></iframe>
+		</span>
+		-->
+	</section>
+	<!-- }}} -->
+
+	<section class="slide" id="markup-0">
+		<h2>The Markup</h2>
+		<ul>
+			<li>Simplified Elements <i>(DOCTYPE, Script, Stylesheet, Charset)</i></li>
+			<li>More Semantical Elements</li>
+			<li>More <i>(Useful)</i> Interactive Elements</li>
+			<li>Video <i>(eh...)</i></li>
+			<li>Canvas!!!</li>
+		</ul>
+	</section>
+
+	<!-- {{{ the Markup : doctype -->
+	<section class="slide" id="markup-declare-0">
+		<h2>The Markup - DOCTYPE</h2>
+		<p class="slide">If you haven't realized: a DOCTYPE can be important</p>
+		<div class="slide">
+		<h3>Previously:</h3>
+		<pre class="prettyprint"><code>
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd"&gt;
+		</code></pre>
+		<pre class="prettyprint"><code>
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd"&gt;
+		</code></pre>
+		<pre class="prettyprint"><code>
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+		</code></pre>
+		</div>
+	</section>
+	<section class="slide" id="markup-declare-1">
+		<h2>The Markup - DOCTYPE</h2>
+		<h3>As if life isn't Hard enough:</h3>
+		<h3 class="slide">Quirks Mode</h3>
+		<pre class="slide prettyprint"><code>
+&lt;!DOCTYPE html PUBLIC&gt;
+		</code></pre>
+		<h3 class="slide">IE series:</h3>
+		<pre class="slide prettyprint"><code>
+&lt;!-- This comment will put IE 6, 7, 8, and 9 in quirks mode --&gt;
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd"&gt;
+		</code></pre>
+	</section>
+	<section class="slide" id="markup-declare-2">
+		<h2>The Markup - DOCTYPE</h2>
+		<h3>Front End Engineering:</h3>
+		<img class="slide" src="imgs/FFFFUUUUUU.jpg" />
+	</section>
+	<section class="slide" id="markup-declare-3">
+		<h2>The Markup - DOCTYPE</h2>
+		<h3>Now:</h3>
+		<pre class="slide prettyprint"><code>
+&lt;!DOCTYPE html&gt;
+		</code></pre>
+		<pre class="slide prettyprint"><code>
+&lt;!DOCTYPE html lang="en"&gt;
+		</code></pre>
+		<img class="slide" src="imgs/PFFFTTTCHH.png" />
+	</section>
+	<section class="slide" id="markup-declare-4">
+		<h2>The Markup - Script</h2>
+		<h3>Previously:</h3>
+		<pre class="prettyprint"><code>
+&lt;script type="text/javascript"&gt;...&lt;/script&gt;
+		</code></pre>
+		<pre class="prettyprint"><code>
+&lt;script type="text/javascript" language="JavaScript"&gt;...&lt;/script&gt;
+		</code></pre>
+		<div class="slide">
+		<h3>Now:</h3>
+		<pre class="prettyprint"><code>
+&lt;script&gt;...&lt;/script&gt;
+		</code></pre>
+		<pre class="prettyprint"><code>
+&lt;script src="xxx.js"&gt;&lt;/script&gt;
+		</code></pre>
+		</div>
+	</section>
+	<section class="slide" id="markup-declare-5">
+		<h2>The Markup - Stylesheet</h2>
+		<h3>Previously:</h3>
+		<pre class="prettyprint"><code>
+&lt;link rel="stylesheet" href="style-original.css" type="text/css" /&gt;
+		</code></pre>
+		<pre class="prettyprint"><code>
+&lt;link rel="stylesheet" href="style-original.css" type="text/css" media="screen"/&gt;
+		</code></pre>
+		<div class="slide">
+		<h3>Now:</h3>
+		<pre class="prettyprint"><code>
+&lt;link rel="stylesheet" href="style-original.css" /&gt;
+		</code></pre>
+		</div>
+	</section>
+	<section class="slide" id="markup-declare-6">
+		<h2>The Markup - Charset</h2>
+		<h3>Previously:</h3>
+		<pre class="prettyprint"><code>
+&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+		</code></pre>
+		<div class="slide">
+		<h3>Now:</h3>
+		<pre class="prettyprint"><code>
+&lt;meta charset="utf-8" /&gt;
+		</code></pre>
+		</div>
+	</section>
+	<!-- }}} -->
+
+	<!-- {{{ semantical -->
+	<section class="slide" id="semantics-0">
+		<h2>The Markup - More Semantical Elements</h2>
+		<p>Think of composing a web page for displaying arbitrary articles</p>
+		<h3>Previously:</h3>
+		<pre class="prettyprint"><code>
+&lt;div class="header"&gt;......&lt;/div&gt;
+		</code></pre>
+		<pre class="slide prettyprint"><code>
+&lt;span class="nav"&gt;......&lt;/span&gt;
+		</code></pre>
+		<pre class="slide prettyprint"><code>
+&lt;div class="section summary"&gt;......&lt;/div&gt;
+		</code></pre>
+		<pre class="slide prettyprint"><code>
+&lt;div class="article"&gt;......&lt;/div&gt;
+		</code></pre>
+		<pre class="slide prettyprint"><code>
+&lt;div class="aside reference"&gt;......&lt;/div&gt;
+		</code></pre>
+		<pre class="slide prettyprint"><code>
+&lt;div class="footer"&gt;......&lt;/div&gt;
+		</code></pre>
+	</section>
+	<section class="slide" id="semantics-1">
+		<h2>The Markup - More Semantical Elements</h2>
+		<h3>Now:</h3>
+		<pre class="slide prettyprint"><code>
+&lt;header class="mytheme blog"&gt;......&lt;/header&gt;
+		</code></pre>
+		<pre class="slide prettyprint"><code>
+&lt;nav class="blue-nested-menus"&gt;......&lt;/nav&gt;
+		</code></pre>
+		<pre class="slide prettyprint"><code>
+&lt;section class="with-summary"&gt;&lt;h1&gt;xxx&lt;h1&gt;......&lt;/section&gt;
+		</code></pre>
+		<pre class="slide prettyprint"><code>
+&lt;article class="blog technical-paper"&gt;......
+	&lt;section class="subsec with-summary"&gt;&lt;h2&gt;yyy&lt;h2&gt;......&lt;/section&gt;
+&lt;/article&gt;
+		</code></pre>
+		<pre class="slide prettyprint"><code>
+&lt;aside class="reference about-the-author"&gt;......&lt;/aside&gt;
+		</code></pre>
+		<pre class="slide prettyprint"><code>
+&lt;footer class="thanks links"&gt;......&lt;/footer&gt;
+		</code></pre>
+	</section>
+	<section class="slide" id="semantics-2">
+		<h2>The Markup - More Semantical Elements</h2>
+		<h3>'Elements' but not just Tags</h3>
+		<p class="slide">Did I mention Attributes?</p>
+		<ul>
+			<li class="slide">'data-' family
+				<ul>
+					<li>data-id</li>
+					<li>data-role</li>
+					<li>data-city</li>
+					<li>data-food</li>
+					<li>...</li>
+				</ul>
+			</li>
+			<li class="slide">link 'rel's
+				<ul>
+					<li>rel=”stylesheet”</li>
+					<li>rel=”nofollow”</li>
+					<li>rel=”alternate”</li>
+					<li>rel=”author”</li>
+					<li>rel=”first|prev|next|last”</li>
+					<li>rel=”noreferrer”</li>
+					<li>rel=”pingback”</li>
+					<li>rel=”prefetch”</li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+	<section class="slide" id="semantics-3">
+		<h2>The Markup - More Semantical Elements</h2>
+		<h3>More (and coming):</h3>
+		<pre class="slide prettyprint"><code>
+&lt;time&gt;2011-11-27T16:54+0800&lt;/time&gt;
+		</code></pre>
+		<pre class="slide prettyprint"><code>
+&lt;hgroup&gt;
+    &lt;h1&gt;......&lt;/h1&gt;
+    &lt;h2&gt;......&lt;/h2&gt;
+&lt;/hgroup&gt;
+		</code></pre>
+		<pre class="slide prettyprint"><code>
+&lt;details&gt;
+    &lt;summary&gt;Copying... &lt;progress max="375505392" value="97543282"&gt;&lt;/progress&gt; 25%&lt;/summary&gt;
+    &lt;dl&gt;
+        &lt;dt&gt;Transfer rate:&lt;/dt&gt; &lt;dd&gt;452KB/s&lt;/dd&gt;
+        &lt;dt&gt;Local filename:&lt;/dt&gt; &lt;dd&gt;/home/rpausch/raycd.m4v&lt;/dd&gt;
+        &lt;dt&gt;Remote filename:&lt;/dt&gt; &lt;dd&gt;/var/www/lectures/raycd.m4v&lt;/dd&gt;
+        &lt;dt&gt;Duration:&lt;/dt&gt; &lt;dd&gt;01:16:27&lt;/dd&gt;
+        &lt;dt&gt;Color profile:&lt;/dt&gt; &lt;dd&gt;SD (6-1-6)&lt;/dd&gt;
+        &lt;dt&gt;Dimensions:&lt;/dt&gt; &lt;dd&gt;320×240&lt;/dd&gt;
+    &lt;/dl&gt;
+&lt;/details&gt;
+		</code></pre>
+	</section>
+	<section class="slide" id="semantics-4">
+		<h2>The Markup - More Semantical Elements</h2>
+		<h3>Microdata</h3>
+		<p class="slide">What is Microdata?</p>
+		<blockquote class="slide" style="font-size:1.3em">
+Microdata is a WHATWG HTML specification used to nest semantics within existing content on web pages. Search engines, web crawlers, and browsers can extract and process Microdata from a web page and use it to provide a richer browsing experience for users. Microdata use a supporting vocabulary to describe an item and name-value pairs to assign values to its properties. Microdata helps technologies such as search engines and web crawlers better understand what information is contained in a web page, providing better search results. Microdata is an attempt to provide a simpler way of annotating HTML elements with machine readable tags than the similar approaches of using RDFa and Microformats.
+		</blockquote>
+	</section>
+	<section class="slide" id="semantics-4">
+		<h2>The Markup - More Semantical Elements</h2>
+		<h3>Microdata: benefit?</h3>
+		<img class="slide" src="imgs/search.png"/>
+	</section>
+	<section class="slide" id="semantics-5">
+		<h2>The Markup - More Semantical Elements</h2>
+		<h3>Currently known Microformats</h3>
+		<ul>
+			<li>People and Organizations: Person, Organization, hCard, XFN</li>
+			<li>Calendars and Events: Event, hCalendar</li>
+			<li>Opinions, Ratings and Reviews: Product, Review, Review-aggregate, VoteLinks, hReview</li>
+			<li>etc.</li>
+		</ul>
+		<ul class="slide">
+			<li>rel="license"</li>
+			<li>rel="tag"</li>
+			<li>rel="home"</li>
+			<li>rel="enclouse"</li>
+			<li>rel="payment"</li>
+			<li>etc.</li>
+		</ul>
+		<h3 class="slide">Usual Namespaces</h3>
+		<ul class="slide">
+			<li>http://microformats.org/</li>
+			<li>http://www.data-vocabulary.org/</li>
+		</ul>
+	</section>
+	<section class="slide" id="semantics-6">
+		<h2>The Markup - More Semantical Elements</h2>
+		<h3>Microdata - Example:</h3>
+		<pre class="prettyprint"><code>
+&lt;section itemscope itemtype="http://data-vocabulary.org/Person"&gt; 
+        Hello, my name is 
+        &lt;span itemprop="name"&gt;Jerome Jia&lt;/span&gt;, 
+        I am a 
+        &lt;span itemprop="title"&gt;Sr. Engineer&lt;/span&gt; 
+        at 
+        &lt;span itemprop="affiliation"&gt;Good Technology&lt;/span&gt;. 
+        I'm usually known as 
+        &lt;span itemprop="nickname"&gt;IUSR&lt;/span&gt; on the internet. 
+        You can visit my homepage at 
+        &lt;a href="http://blog.iusr.me" itemprop="url"&gt;blog.iusr.me&lt;/a&gt;. 
+        &lt;section itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address"&gt;
+                I work at 
+                &lt;span itemprop="street-address"&gt;309 Nanjing Road&lt;/span&gt;
+                , 
+                &lt;span itemprop="locality"&gt;Nankai District&lt;/span&gt;
+                , 
+                &lt;span itemprop="region"&gt;Tianjin, China&lt;/span&gt;.
+        &lt;/section&gt;
+&lt;/section&gt;
+		</code></pre>
+	</section>
+	<section class="slide" id="semantics-7">
+		<h2>The Markup - More Semantical Elements</h2>
+		<h3>Microdata - Douban.com's <i>Magical</i> search result:</h3>
+		<img src="imgs/search.png"/>
+	</section>
+	<section class="slide" id="semantics-8">
+		<h2>The Markup - More Semantical Elements</h2>
+		<h3>Microdata - Douban.com's <i>Magical</i> search result:</h3>
+		<img src="imgs/html5book-snippet.png"/>
+	</section>
+	<section class="slide" id="semantics-9">
+		<h2>The Markup - More Semantical Elements</h2>
+		<h3>Microdata - Douban.com's <i>Magical</i> search result:</h3>
+		<img src="imgs/html5book-douban-src.png"/>
+	</section>
+	<section class="slide" id="semantics-a">
+		<h2>The Markup - More Semantical Elements</h2>
+		<h3>Why Making Web Pages Semantical So @Important?</h3>
+		<img class="slide" src="imgs/vap-docmap.png"/>
+	</section>
+	<section class="slide" id="semantics-b">
+		<h2>The Markup - More Semantical Elements</h2>
+		<h3>Why Making Web Pages Semantical So @Important?</h3>
+		<img src="imgs/vap-cr-docmap.png"/>
+	</section>
+	<!-- }}} -->
+
+	<!-- {{{ new form elements -->
+	<section class="slide" id="form-0">
+		<h2>The Markup - More Interactive Elements</h2>
+		<p>Mostly for tag "input"</p>
+		<ul>
+			<li>[placeholder] (also for <code>textarea</code>)</li>
+			<li>[autofocus]</li>
+			<li>[required]</li>
+			<li>email</li>
+			<li>url</li>
+			<li>number</li>
+			<li>search</li>
+			<li>range</li>
+			<li>date, month, week, time, datetime, datetime-local</li>
+			<li>color</li>
+		</ul>
+	</section>
+	<section class="slide" id="form-1">
+		<h2>The Markup - More Interactive Elements</h2>
+		<p>Demo</p>
+		<div style="margin: 0 10em 0 10em;">
+			<span style="float:left">
+				<p>Android, text input</p><img src="imgs/android-form-text.png" />
+			</span>
+			<span style="float:right">
+				<p>Android, number input</p><img src="imgs/android-form-number.png"/>
+			</span>
+		</div>
+	</section>
+	<section class="slide" id="form-2">
+		<h2>The Markup - More Interactive Elements</h2>
+		<p>Demo</p>
+		<div style="margin: 0 10em 0 10em;">
+			<span style="float:left">
+				<p>iPhone, email input</p><img src="imgs/iphone-form-email.png" />
+			</span>
+			<span style="float:right">
+				<p>iPhone, telephone number input</p><img src="imgs/iphone-form-tel.png"/>
+			</span>
+		</div>
+	</section>
+	<section class="slide" id="form-2">
+		<h2>The Markup - More Interactive Elements</h2>
+		<p>Demo</p>
+		<p>See it:<p>
+		<p><a href="input-demos.html" target="_blank">input-demos.html</a></p>
+		<p><a href="input-datetime.html" target="_blank">input-datetime.html</a></p>
+	</section>
+	<!-- }}} -->
+
+	<!-- {{{ other controls -->
+	<section class="slide" id="controls-0">
+		<h2>The Markup - More Interactive Elements</h2>
+		<h3>Other Controls</h3>
+		<p>Interactive 'details'</p>
+		<pre style="prettyprint"><code>
+&lt;details&gt;
+  &lt;summary&gt;HTML 5&lt;/summary&gt;
+  This slide demonstrates the new "summary" tag.&lt;br/&gt;
+  This part is hidden by default.
+&lt;/details&gt;
+
+&lt;details open="true"&gt;
+  &lt;summary&gt;HTML 5&lt;/summary&gt;
+  Unless its "open" attribute is set to "true".
+&lt;/details&gt;
+		</code></pre>
+		<div>
+			<details>
+				<summary>HTML 5</summary>
+				This slide demonstrates the new "summary" tag.<br/>
+				This part is hidden by default.
+			</details>
+			<p/>
+			<details open="true">
+				<summary>HTML 5</summary>
+				Unless its "open" attribute is set to <code>"true"</code>.
+			</details>
+		</div>
+	</section>
+	<section class="slide" id="controls-1">
+		<h2>The Markup - More Interactive Elements</h2>
+		<h3>Other Controls</h3>
+		<p>A score bar<p>
+		<pre style="prettyprint"><code>
+&lt;meter min="0" max="100" low="40" high="80" optimum="100" value="30"&gt;Ouch&lt;/meter&gt;
+&lt;meter min="0" max="100" low="40" high="80" optimum="100" value="75"&gt;OK&lt;/meter&gt;
+&lt;meter min="0" max="100" low="40" high="80" optimum="100" value="85"&gt;Good&lt;/meter&gt;
+		</code></pre>
+		<div style="margin-bottom: 2em;">
+			<meter min="0" max="100" low="40" high="80" optimum="100" value="30">Ouch</meter><br/>
+			<meter min="0" max="100" low="40" high="80" optimum="100" value="75">OK</meter><br/>
+			<meter min="0" max="100" low="40" high="80" optimum="100" value="85">Good</meter><br/>
+		</div>
+	</section>
+	<section class="slide" id="controls-2">
+		<h2>The Markup - More Interactive Elements</h2>
+		<h3>Other Controls</h3>
+		<p>Progress bar</p>
+		<pre style="prettyprint"><code>
+&lt;progress&gt;working...&lt;/progress&gt;
+		</code></pre>
+		<div style="margin-bottom: 2em;">
+			Downloading: <progress>working...</progress> ETA: unknown
+		</div>
+		<div class="slide">
+			<p>Progress bar with a <i>progress</i></p>
+			<pre style="prettyprint"><code>
+&lt;progress value="75" max="100"&gt;3/4 complete&lt;/progress&gt;
+			</code></pre>
+			<div>
+				Copying: <progress value="75" max="100">3/4 complete</progress> 75 of 100
+			</div>
+		</div>
+	</section>
+	<!-- }}} -->
+
+	<!-- {{{ video -->
+	<section class="slide" id="video-0">
+		<h2>The Markup - Video</h2>
+		<h3>Some background</h3>
+		<p>Video, Audio, Container</p>
+		<p>Profiles (and Mobile Devices)</p>
+		<h3>Video Container</h3>
+		<p>.avi, .mp4, .m4v, .mov, .ogv</p>
+		<p>Video container formats define how to store things within: not what kinds of data are stored.</p>
+		<p>BUT: NOT all video streams are compatible with all container formats</p>
+		<h3>Popular Video Container Formats</h3>
+		<ul>
+			<li>MPEG4: .mp4, .m4v</li>
+			<li>Flash Video: .flv</li>
+			<li>Ogg: .ogv. Open standard, opensource-friendly.
+				<ul>
+					<li>Theora: Ogg Video</li>
+					<li>Vorbis: Ogg Audio</li>
+				</ul>
+			</li>
+			<li>WebM: VP8 video + Vorbis audio</li>
+			<li>Audio Video Interleave: .avi</li>
+		</ul>
+	</section>
+	<section class="slide" id="video-1">
+		<h2>The Markup - Video</h2>
+		<h3>Some background</h3>
+		<p>Video, Audio, Container</p>
+		<p>Profiles (and Mobile Devices)</p>
+		<h3>Video Codecs</h3>
+		<p>Algorithms used for encoding and decoding video stream.</p>
+		<h3>Popular Video Codecs</h3>
+		<ul>
+			<li>H.264, a.k.a, MPEG-4 part 10, MPEG-4 A(dvanced)V(ideo)C(oding): usually hardware-accelerated</li>
+			<li>Theora: base on VP3, embraced most by the Linux community</li>
+			<li>VP8: by On2, which is later acquired by Google. Output near H.264 High profile, decoding complexity near H.264 Baseline.</li>
+		</ul>
+	</section>
+	<section class="slide" id="video-2">
+		<h2>The Markup - Video</h2>
+		<h3>Some background</h3>
+		<p>Video, Audio, Container</p>
+		<p>Profiles (and Mobile Devices)</p>
+		<h3>Audio Codecs</h3>
+		<p>Algorithms used for encoding and decoding audio stream.</p>
+		<h3>Popular Audio Codecs</h3>
+		<ul>
+			<li>MP3, a.k.a MPEG-1 Audio Layer 3: 64kbps, 128kbps, 192kbps, etc., up to 320kbps, allows variable bitrate encoding</li>
+			<li>AAC, a.k.a Advanced Audio Coding: developed from MPEG-2 Part 7, 1997; allows encoding up to 48 channels (MP3 only 2)</li>
+			<li>Vorbis: supports arbitrary number of channels, embraced most by the Linux community.</li>
+		</ul>
+	</section>
+	<section class="slide" id="video-3">
+		<h2>The Markup - Video</h2>
+		<h3>Profiles</h3>
+		<p>Predefined composite features that may fit for a certain (hardware) platform</p>
+		<h3>Examples</h3>
+		<ul>
+			<li>H.264
+				<ul>
+					<li>Baseline: iPhone 4-</li>
+					<li>Main: AppleTV</li>
+					<li>High: Blu-Ray, YouTube</li>
+					<li>Progressive High: Blu-Ray</li>
+					<li>High 4:2:2</li>
+					<li>High 4:4:4</li>
+				</ul>
+			</li>
+			<li>AAC
+				<ul>
+					<li>Low-Complexity (AAC-LC, LC-AAC)</li>
+					<li>Main (AAC Main)</li>
+					<li>Scalable Sampling Rate (AAC-SSR)</li>
+					<li>Low Delay</li>
+					<li>Natural Audio</li>
+					<li>High Quality</li>
+				</ul>
+			</li>
+		</ul>
+		<div class="slide">
+			<h3>Something about Flash</h3>
+			<p class="slide">Adobe Flash (9.0.60.184 and later) supports H.264 video (all profiles) and AAC audio (all profiles) in an MP4 container.</p>
+		</div>
+	</section>
+
+	<section class="slide" id="video-4">
+		<h2>The Markup - Video</h2>
+		<h3>Video...</h3>
+		<p class="slide">Why do I sigh?</p>
+		<div class="slide">
+			<p class="credit">Source: wikipedia.org</p>
+			<img src="imgs/html5video-browser-support.png"/>
+		</div>
+	</section>
+	<section class="slide" id="video-5">
+		<h2>The Markup - Video</h2>
+		<h3>Video...</h3>
+		<p>Why do I sigh?</p>
+		<p class="credit">Source: <a href="http://praegnanz.de/html5video/" target="_blank">http://praegnanz.de/html5video/</a></p>
+		<img src="imgs/html5video-players0.png"/>
+	</section>
+	<section class="slide" id="video-6">
+		<h2>The Markup - Video</h2>
+		<h3>Video...</h3>
+		<p>Why do I sigh?</p>
+		<img src="imgs/html5video-players1.png"/>
+		<p>Source: html5video.org</p>
+	</section>
+	<section class="slide" id="video-7">
+		<h2>The Markup - Video</h2>
+		<h3>Demo</h3>
+		<div class="code-container">
+		<textarea class="coder-editor">
+<video width="390" id="clip" controls>
+  <source
+    src="http://slides.html5rocks.com/src/chrome_japan.webm"
+    type='video/webm; codecs="vp8, vorbis"' />
+  <source
+    src="http://slides.html5rocks.com/src/chrome_japan.mp4"
+    type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+  <source
+    src="http://slides.html5rocks.com/src/chrome_japan.ogv"
+    type='video/ogg; codecs="theora, vorbis"' />
+  Your browser does not support the video tag
+</video>
+		</textarea>
+		</div>
+	</section>
+	<!-- }}} -->
+
+	<!-- {{{ canvas -->
+	<section class="slide" id="canvas-0">
+		<h2>The Markup - Canvas</h2>
+		<h3>Finally somewhere to draw freely!</h3>
+		<p>Using JavaScript...</p>
+		<p>&nbsp;&nbsp;and 2D</p> 
+	</section>
+	<section class="slide" id="canvas-1">
+		<h2>The Markup - Canvas</h2>
+		<p>Simple draw strokes</p>
+		<p class="credit">Credit: html5rocks.com</p>
+		<div class="code-container">
+		<textarea class="coder-editor">
+<canvas id="canv" width="450" height="280">
+</canvas>
+<script>
+var canvasElement = document.querySelector('#canv');
+var canvasContext = canvasElement.getContext('2d');
+
+// draw a rectangle
+canvasContext.fillRect(250, 25, 150, 100);
+
+// draw an arch
+canvasContext.beginPath(); // begin
+canvasContext.arc(
+	450, 110, 100, 
+	Math.PI * 1/2, Math.PI * 3/2);
+canvasContext.lineWidth = 15;
+canvasContext.lineCap = 'round';
+canvasContext.strokeStyle = 'rgba(255, 127, 0, 0.5)';
+canvasContext.stroke(); // finish
+</script>
+		</textarea>
+		</div>
+	</section>
+	<section class="slide" id="canvas-2">
+		<h2>The Markup - Canvas</h2>
+		<p>Animate a bit</p>
+		<p class="credit">Credit: html5demos.com</p>
+		<div class="code-container">
+			<textarea class="coder-editor">
+<canvas id="canv">
+<script>
+var x = 200, y = 120, size = 20, degrees = 45;
+
+var canvas = document.querySelector('#canv');
+
+// yes, you can modify these!
+canvas.width = 400;
+canvas.height = 300;
+var ctx = canvas.getContext("2d"),
+i = 0, loops = 0, degreesList = [];
+
+for (i = 0; i < degrees; i++) {
+	degreesList.push(i);
+}
+
+// reset
+i = 0;
+
+// so I can kill it later
+window.canvasTimer = setInterval(draw, 900/degrees);  
+
+function reset() {
+  ctx.clearRect(0,0,canvas.width,canvas.height); // clear canvas
+
+  var left = degreesList.slice(0, 1);
+  var right = degreesList.slice(
+    1, degreesList.length);
+  degreesList = right.concat(left);
+}
+
+function draw() {
+  var c, s, e;
+
+  var d = 0;
+
+  if (i == 0) {
+    reset();
+  }
+
+  ctx.save();
+
+  d = degreesList[i];
+  c = Math.floor(255/degrees*i);
+  ctx.strokeStyle =
+    'rgb(' + c + ', ' + c + ', ' + c + ')';
+  ctx.lineWidth = size;
+  ctx.beginPath();
+  s = Math.floor(360/degrees*(d));
+  e = Math.floor(360/degrees*(d+1)) - 1;
+
+  ctx.arc(x, y, size,
+    (Math.PI/180)*s, (Math.PI/180)*e, false);
+  ctx.stroke();
+
+  ctx.restore();
+
+  i++;
+  if (i >= degrees) {
+    i = 0;
+  }
+}
+</script>
+			</textarea>
+		</div>
+	</section>
+	<section class="slide" id="canvas-3">
+		<h2>The Markup - Canvas</h2>
+		<p>Gradient</p>
+		<p style="float:right; font-size: 0.8em; font-style: italic">Credit: html5demos.com</p>
+		<div class="code-container">
+			<textarea class="coder-editor">
+<canvas id="canv" style="position: absolute; top: 0; left: 0; height: 100%; width: 100%;">
+<script>
+var canvas = document.querySelector('#canv'),
+    ctx = null,
+    grad = null,
+    body = document.getElementsByTagName('body')[0],
+    color = 255;
+ 
+ctx = canvas.getContext('2d');
+ctx.clearRect(0, 0, 600, 600);
+ctx.save();
+// Create radial gradient
+grad = ctx.createRadialGradient(0,0,0,0,0,600); 
+grad.addColorStop(0, '#000');
+grad.addColorStop(1,
+  'rgb(' + color + ', ' + color + ', ' + color + ')');
+
+// assign gradients to fill
+ctx.fillStyle = grad;
+
+// draw 600x600 fill
+ctx.fillRect(0,0,600,600);
+ctx.save();
+  
+body.onmousemove = function (event) {
+  var width = window.innerWidth, 
+      height = window.innerHeight, 
+      x = event.clientX, 
+      y = event.clientY,
+      rx = 600 * x / width,
+      ry = 600 * y / height;
+ 
+  var xc = ~~(256 * x / width);
+  var yc = ~~(256 * y / height);
+
+  grad = ctx.createRadialGradient(
+          rx, ry, 0, rx, ry, 600); 
+  grad.addColorStop(0, '#000');
+  grad.addColorStop(1,
+          ['rgb(', xc, ', ', (255 - xc),
+           ', ', yc, ')'].join(''));
+  // ctx.restore();
+  ctx.fillStyle = grad;
+  ctx.fillRect(0,0,600,600);
+  // ctx.save();
+};
+</script>
+			</textarea>
+		</div>
+	</section>
+	<section class="slide" id="canvas-4">
+		<h2>The Markup - Canvas</h2>
+		<p>More sophisticated</p>
+		<p class="credit">Credit: html5rocks.com</p>
+		<iframe src="http://slides.html5rocks.com/src/canvasphoto/index.html" scrolling="no" width="100%" height="90%"></iframe>
+	</section>
+	<!-- }}} -->
+
+	<section class="slide" id="webgl-demo">
+		<h2>The Markup - Web GL</h2>
+		<p>Your CPU and/or display chip may get hot.</p>
+		<p class="credit">Credit: html5rocks.com</p>
+		<ul>
+			<li><a href="http://slides.html5rocks.com/src/webgl/san_angeles.html" target="_blank">San Angeles</a></li>
+			<li><a href="https://cvs.khronos.org/svn/repos/registry/trunk/public/webgl/sdk/demos/google/shiny-teapot/index.html" target="_blank">Shiny Teapot</a></li>
+			<li><a href="https://cvs.khronos.org/svn/repos/registry/trunk/public/webgl/sdk/demos/webkit/TeapotPerVertex.html" target="_blank">Teapot (vertex)</a></li>
+			<li><a href="https://cvs.khronos.org/svn/repos/registry/trunk/public/webgl/sdk/demos/webkit/TeapotPerPixel.html" target="_blank">Teapot (pixel)</a></li>
+			<li><a href="https://cvs.khronos.org/svn/repos/registry/trunk/public/webgl/sdk/demos/webkit/Earth.html" target="_blank">Earth &amp; Mars (Apple)</a></li>
+		</ul>
+	</section>
+
+	<section class="slide" id="js-0">
+		<h1 style="line-height:1.5em">New APIs,<br/>play with JavaScript</h1>
+		<h2 class="slide">The only limit is your imagination!</h2>
+	</section>
+	<section class="slide" id="js-1">
+		<h2>Keep in mind:</h2>
+		<p>JavaScript is just the facade to new objects, methods and APIs</p>
+		<p>Support of these APIs varies on different browsers, OS, device hardware, etc.</p>
+	</section>
+	<section class="slide" id="js-2">
+		<h2>What's new?</h2>
+		<h3>Interactions</h3>
+		<ul class="slide">
+			<li>Geolocation</li>
+			<li>(webkit)Notifications</li>
+			<li>Device Orientation</li>
+		</ul>
+		<div class="slide">
+			<h3>Behind the Scenes</h3>
+			<ul>
+				<li>Web Storage: localStorage, sessionStorage</li>
+				<li>Web SQL Database</li>
+				<li>indexedDB</li>
+				<li>applicationCache</li>
+				<li>History API</li>
+				<li>(Web) Worker</li>
+				<li>WebSocket</li>
+			</ul>
+		</div>
+		<div class="slide">
+			<h3>Native, Hardware & Device</h3>
+			<ul>
+				<li>Drag and Drop</li>
+				<li>FileReader (File API)</li>
+				<li>FileSystem APIs</li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- {{{ Geolocation -->
+	<section class="slide" id="geo-0">
+		<h2>Geolocation</h2>
+		<p>You've probably seen this a LOT, on handheld devices.</p>
+		<h3>Spec:</h3>
+		<p><a href="http://www.w3.org/TR/geolocation-API/" target="_blank">http://www.w3.org/TR/geolocation-API/</a></p>
+		<iframe src="http://www.w3.org/TR/geolocation-API/" width="1000" height="500" frameborder="0"></iframe>
+	</section>
+	<section class="slide" id="geo-1">
+		<h2>Geolocation</h2>
+		<h3>Demo</h3>
+		<div class="code-container">
+		<textarea class="coder-editor">
+<!-- use Google Maps API -->
+<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<button id="btn-geoloc">Locate Me</button>
+<div id="geo-stat" style="font-size: 0.8em"></div>
+<div id="geo-map" style="width: 500px; height: 300px;">
+</div>
+<script>
+var map = null;
+var geolog = document.querySelector('#geo-stat');
+var geoMap = document.querySelector('#geo-map');
+
+function showPosition(position) {
+  geolog.innerHTML = '<p>' + position.coords.accuracy +
+    ' meters around (' + position.coords.latitude + ', ' +
+    position.coords.longitude + ').</p>' +
+	'<p>Altitude: ' + position.altitude +
+	'm, accuracy ' + position.altitudeAccuracy + '.</p>' +
+	'<p>Heading ' + position.heading + ' degrees.</p><p>Speed at ' + position.speed + 'm/s.</p>' +
+	'<p>Position data acquired at ' + new Date(position.timestamp) + '</p>';
+  var latLng = new google.maps.LatLng(
+    position.coords.latitude, position.coords.longitude);
+  var marker = new google.maps.Marker({
+    position: latLng, map: map
+  });
+  map.setCenter(latLng);
+  map.setZoom(15);
+}
+
+function handlePositionError(evt) {
+  geolog.textContent = evt.message;
+}
+
+function successPositionHandler(evt) {
+  if (!map) {
+    map = new google.maps.Map(geoMap, {
+      zoom: 9,
+      center: new google.maps.LatLng(39.2, 117.5),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+    map.getDiv().style.border =  '1px solid #ccc';
+  }
+
+  if (navigator.geolocation) { // if available
+    geolog.style.visibility = 'visible';
+    geolog.textContent = 'Locating...';
+    navigator.geolocation.getCurrentPosition(showPosition, handlePositionError);
+    navigator.geolocation.watchPosition(showPosition, handlePositionError);
+  } else {
+    geolog.textContent = 'Geolocation APIs are not supported!';
+  }
+}
+
+document.querySelector('#btn-geoloc').addEventListener('click', successPositionHandler, false);
+geoMap.addEventListener('click', successPositionHandler, false);
+</script>
+		</textarea>
+		</div>
+	</section>
+	<!-- }}} -->
+
+	<!-- {{{ notifications -->
+	<section class="slide" id="notif-0">
+		<h2>(webkit)Notifications</h2>
+		<p>You've probably seen this a lot, too, using desktop applications.</p>
+		<h3>Spec:</h3>
+		<p><a href="http://dev.w3.org/2006/webapi/WebNotifications/publish/" target="_blank">http://dev.w3.org/2006/webapi/WebNotifications/publish/</a></p>
+		<p>Due to the popularity of the WebKit, will demonstrate the webkitNotifications API.</p>
+		<iframe src="http://dev.w3.org/2006/webapi/WebNotifications/publish/" width="1000" height="500" frameborder="0"></iframe>
+	</section>
+	<section class="slide" id="notif-1">
+		<h2>(webkit)Notifications</h2>
+		<h3>Demo</h3>
+		<div class="code-container">
+		<textarea class="coder-editor">
+<button id="notif-req-permission">Request Permission First</button><span id="notif-perm-stat"></span><p/>
+<button id="notif-show">Show a Notification</button>
+<span><input id="notif-autohide" type="checkbox"/><lable for="notif-autohide">Automatically Hide after 10s</label></span><p/>
+<button id="notif-hide">Cancel/Hide the Notification</button>
+<script>
+document.querySelector('#notif-req-permission').addEventListener('click', function() {
+  if (window.webkitNotifications.checkPermission() == 0) {
+    document.querySelector('#notif-perm-stat').textContent = 'Permission already granted.'
+  } else {
+    window.webkitNotifications.requestPermission();
+  }
+}, false);
+
+function cancelNotif() {
+  if (window.notif) {
+    window.notif.cancel();
+  }
+}
+
+document.querySelector('#notif-show').addEventListener('click', function() {
+if (window.webkitNotifications.checkPermission() == 0) {
+  window.notif =
+    window.webkitNotifications.createNotification(
+      //"imgs/html5-badge-h-css3-semantics.png", // iconUrl
+      "http://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png", // iconUrl
+      'HTML5', // title
+      'HTML5 ROCKS!!!' // body
+  );
+  window.notif.show();
+  if (document.querySelector('#notif-autohide').checked) {
+    window.setTimeout(cancelNotif, 10000);
+  }
+} else {
+  window.webkitNotifications.requestPermission();
+}}, false);
+
+document.querySelector('#notif-hide').addEventListener('click', cancelNotif, false);
+</script>
+		</textarea>
+		</div>
+	</section>
+	<!-- }}} -->
+
+	<!-- {{{ Device Orientation -->
+	<section class="slide" id="device-orientation-0">
+		<h2>Device Orientation</h2>
+		<p>Fancy feature you think maybe only handheld devices have,<br/>
+		and <i>just</i> for <b>Native</b> applications?</p>
+		<h3>Spec:</h3>
+		<p><a href="http://www.w3.org/TR/orientation-event/" target="_blank">http://www.w3.org/TR/orientation-event/</a></p>
+		<iframe src="http://www.w3.org/TR/orientation-event/" width="1000" height="500" frameborder="0"></iframe>
+	</section>
+	<section class="slide" id="device-orientation-1">
+		<h2>Device Orientation</h2>
+		<h3>The 3 Angles - initial</h3>
+		<img src="imgs/orientation-start.png"/>
+	</section>
+	<section class="slide" id="device-orientation-2">
+		<h2>Device Orientation</h2>
+		<h3>The 3 Angles - alpha</h3>
+		<img src="imgs/orientation-c-rotation.png"/>
+	</section>
+	<section class="slide" id="device-orientation-3">
+		<h2>Device Orientation</h2>
+		<h3>The 3 Angles - beta</h3>
+		<img src="imgs/orientation-a-rotation.png"/>
+	</section>
+	<section class="slide" id="device-orientation-4">
+		<h2>Device Orientation</h2>
+		<h3>The 3 Angles - gamma</h3>
+		<img src="imgs/orientation-b-rotation.png"/>
+	</section>
+	<section class="slide" id="device-orientation-5">
+		<h2>Device Orientation</h2>
+		<h3>Demo</h3>
+		<div class="code-container">
+		<textarea class="coder-editor">
+<div style="margin-bottom: 1em;">
+  <canvas id="canv-a" width="120" height="120" data-linecolor='rgba(255, 0, 0, 0.5)'></canvas>
+  <div id="alpha-val"></div>
+</div>
+<div style="margin-bottom: 1em;">
+  <canvas id="canv-b" width="120" height="120" data-linecolor='rgba(0, 255, 0, 0.5)'></canvas>
+  <div id="beta-val"></div>
+</div>
+<div style="margin-bottom: 1em;">
+  <canvas id="canv-c" width="120" height="120" data-linecolor='rgba(0, 0, 255, 0.5)'></canvas>
+  <div id="gamma-val"></div>
+</div>
+<script>
+function drawAngle(val, canv) {
+  var ctx = canv.getContext('2d');
+  ctx.clearRect(0, 0, canv.width, canv.height);
+  ctx.save();
+
+  // gauge circle
+  ctx.beginPath(); // begin
+  var centerX = canv.width / 2;
+  var centerY = canv.height / 2;
+  var radius = Math.min(canv.width / 2, canv.height / 2);
+  ctx.lineWidth = 1;
+  ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+  ctx.strokeStyle = 'rgba(0, 0, 0, 0.5)';
+  ctx.stroke(); // finish
+  ctx.closePath();
+
+  // needle
+  ctx.beginPath();
+  ctx.moveTo(canv.width / 2, canv.height / 2);
+  var x = canv.width / 2 + radius * Math.cos(val / Math.PI / 2);
+  var y = canv.height / 2 - radius * Math.sin(val / Math.PI / 2);
+  ctx.lineTo(x, y);
+  ctx.lineWidth = 3;
+  ctx.strokeStyle = canv.dataset['linecolor'];
+  ctx.stroke(); // finish
+  ctx.closePath();
+}
+window.addEventListener("deviceorientation", function(event) {
+  document.querySelector('#alpha-val').textContent = 'alpha: ' + event.alpha;
+  drawAngle(0 + event.alpha, document.querySelector('#canv-a'));
+  document.querySelector('#beta-val').textContent = 'beta: ' + event.beta;
+  drawAngle(event.beta, document.querySelector('#canv-b'));
+  document.querySelector('#gamma-val').textContent = 'gamma: ' + event.gamma;
+  drawAngle(event.gamma, document.querySelector('#canv-c'));
+}, true);
+</script>
+		</textarea>
+		</div>
+	</section>
+	<!-- }}} -->
+
+	<!-- {{{ localStorage -->
+	<section class="slide" id="webStorage-0">
+		<h2>localStorage, sessionStorage</h2>
+		<h3>Features</h3>
+		<ul>
+			<li>K-V <i>'database'</i>: BOTH MUST be String</li>
+			<li>localStorage: persistent storage</li>
+			<li>sessionStorage: tab-based</li>
+			<li>With event support (storage event): communicate, share amongst pages from the same Origin</li>
+			<li>Origin-based Security: origin = (scheme, host, port)</li>
+		</ul>
+		<h3>No Guarantee</h3>
+		<ul>
+			<li>Available size of storage varies</li>
+			<li>User may tamper with it</li>
+			<li>User may forbid it</li>
+		</ul>
+	</section>
+	<section class="slide" id="webStorage-1">
+		<h2>localStorage, sessionStorage</h2>
+		<h3>Spec:</h3>
+		<p><a href="http://www.w3.org/TR/webstorage/" target="_blank">http://www.w3.org/TR/webstorage/</a></p>
+		<iframe src="http://www.w3.org/TR/webstorage/" width="1000" height="500" frameborder="0"></iframe>
+	</section>
+	<section class="slide" id="webStorage-2">
+		<h2>localStorage, sessionStorage</h2>
+		<h3>Demo</h3>
+		<div class="code-container">
+		<textarea class="coder-editor">
+<button id="persist">Store</button>
+<p id="log"></p>
+<div id="events" style="border:5px solid red;"></div>
+<script>
+var area = document.createElement('textarea');
+area.rows = 5; area.cols= 50; area.placeholder = 'Type something to persist (hopefully).';
+document.body.insertBefore(area, document.querySelector('#persist'));
+var itemName = 'text-value';
+// place content from previous edit
+if (!area.value) {
+  area.value = window.localStorage.getItem(itemName);
+}
+updateLog(false);
+
+// your content will be saved locally
+document.querySelector('#persist').addEventListener('click', function () {
+  window.localStorage.setItem(itemName, area.value);
+  window.localStorage.setItem(itemName + '-ts', (new Date()).getTime());
+  updateLog(true);
+}, false);
+
+function updateLog(new_save) {
+  var log = document.querySelector("#log");
+  if (window.localStorage.getItem(itemName)) {
+    if (new_save) {
+      log.textContent = 'Stored.';
+      setTimeout(function() {log.textContent = '';}, 3000);
+    } else {
+      var delta = ((new Date()).getTime() - (new Date()).setTime(window.localStorage.getItem(itemName + '-ts'))) / 1000;
+      log.textContent = 'last stored: ' + delta + 's ago';
+    }
+  }
+}
+
+// subscribe to storage events
+window.addEventListener('storage', function(event) {
+  document.querySelector('#events').innerHTML +=
+  '<p>New event on URL: ' + event.url +
+  '<br/>"' + event.key + '" changed from "' + event.oldValue +
+  '" to "' + event.newValue + '"</p>'
+}, false);
+</script>
+		</textarea>
+		</div>
+	</section>
+	<!-- }}} -->
+
+	<!-- {{{ Web SQL Datbase -->
+	<section class="slide" id="sqldb-0">
+		<h2>Web SQL Database</h2>
+		<p>Targets on providing an embedded RDBMS within the browser</p>
+		<h3>Inactive</h3>
+		<p>All interested implementors have picked sqlite.</p>
+		<h3>Spec</h3>
+		<p><a href="http://www.w3.org/TR/webdatabase/" target="_blank">http://www.w3.org/TR/webdatabase/</a></p>
+		<iframe src="http://www.w3.org/TR/webdatabase/" width="1000" height="500" frameborder="0"></iframe>
+	</section>
+	<!-- }}} -->
+
+	<!-- {{{ indexedDb -->
+	<section class="slide" id="indexeddb-0">
+		<h2>Indexed Database</h2>
+		<h3>Features</h3>
+		<ul>
+			<li>K-V <i>'database'</i>: a wider range of choices on types</li>
+			<li>Applicable Key types:
+			<ul>
+				<li>float</li>
+				<li>Date</li>
+				<li>String</li>
+				<li>Array: elements within MUST conform to the types above</li>
+			</ul>
+			</li>
+			<li>Applicable Value types:
+			<p>Any value that is supported by the internal <a href="http://www.w3.org/TR/html5/common-dom-interfaces.html#internal-structured-cloning-algorithm" target="_blank"><code>Structured Clone Algorithm</code></a> of HTML5.</p></li>
+			</li>
+			<li>Transactional</li>
+			<li>Async + Sync APIs</li>
+		</ul>
+	</section>
+	<section class="slide" id="indexeddb-1">
+		<h2>Indexed Database</h2>
+		<h3>Spec</h3>
+		<p><a href="http://www.w3.org/TR/IndexedDB/" target="_blank">http://www.w3.org/TR/IndexedDB/</a></p>
+		<iframe src="http://www.w3.org/TR/IndexedDB/" width="1000" height="500" frameborder="0"></iframe>
+	</section>
+	<!-- }}} -->
+
+	<!-- {{{ CSS -->
+	<section class="slide" id="css-0">
+		<h2>Cascading Style Sheets</h2>
+		<h3 style="text-align: center; margin-top: 4em;">Version 3</h3>
+	</section>
+	<section class="slide" id="css-1">
+		<h2>Cascading Style Sheets</h2>
+		<h3>A few Demos</h3>
+	</section>
+
+	<section class="slide" id="viz-0">
+		<h2>Cascading Style Sheets</h2>
+		<h3>&nbsp;&nbsp;+ Canvas/SVG</h3>
+		<h3>&nbsp;&nbsp;+ JavaScript (of course)</h3>
+		<h3>= Fancy Visualization</h3>
+		<ul>
+			<li><a href="http://www.20thingsilearned.com/" target="_blank">20 Things I Learned About Browsers and the Web</a></li>
+			<li><a href="http://mbostock.github.com/d3/" target="_blank">d3</a></li>
+			<li><a href="http://box2d-js.sourceforge.net/index2.html" target="_blank">Box2D JS</a></li>
+		</ul>
+	</section>
+	<section class="slide" id="viz-1">
+		<h2>Fancy Visualization</h2>
+		<h3>Demo: d3</h3>
+		<iframe src="d3-0.html" scroll="no" width="1000" height="600"></iframe>
+	</section>
+	<section class="slide" id="viz-2">
+		<h2>Fancy Visualization</h2>
+		<h3>Demo: d3, Voronoi Diagram</h3>
+		<iframe src="d3-1.html" scroll="no" width="1000" height="600"></iframe>
+	</section>
+	<section class="slide" id="viz-3">
+		<h2>Fancy Visualization</h2>
+		<h3>Demo: d3, Stream Graph</h3>
+		<iframe src="d3-2.html" scroll="no" width="1000" height="600"></iframe>
+	</section>
+	<section class="slide" id="viz-4">
+		<h2>Fancy Visualization</h2>
+		<h3>Demo: Box2DJS composite demos</h3>
+		<iframe src="box2d-0.html" scroll="no" width="1000" height="600"></iframe>
+	</section>
+	<!-- }}} -->
+
+	<!-- {{{ Luck Dogs -->
+	<section class="slide" id="lucky-0">
+		<h2>Lucky Dogs</h2>
+		<h3>From JavaScript</h3>
+		<ul>
+			<li>Google V8</li>
+			<li>CommonJS</li>
+			<li>node.js</li>
+			<li>RingoJS</li>
+		</ul>
+		<h3>Application Frameworks</h3>
+		<ul>
+			<li>jQuery</li>
+			<li>jQuery Mobile</li>
+			<li>Modernizr</li>
+			<li>Video for Everybody!</li>
+		</ul>
+	</section>
+	<section class="slide" id="lucky-1">
+		<h2>V8 Javascript Engine</h2>
+		<h3>Goal: Performance</h3>
+		<h3><a href="http://code.google.com/p/v8/" target="_blank">http://code.google.com/p/v8/</a>
+	</section>
+	<section class="slide" id="lucky-2">
+		<h2>CommonJS</h2>
+		<h3><a href="http://www.commonjs.org/" target="_blank">http://www.commonjs.org/</a>
+		<h3>Goal: Common Runtime Across Platforms</h3>
+		<p>With CommonJS-compliant systems, you can use JavaScript to write:</p>
+		<ul>
+			<li>Server-side JavaScript applications</li>
+			<li>Command line tools</li>
+			<li>Desktop GUI-based applications</li>
+			<li>Hybrid applications (Titanium, Adobe AIR)</li>
+		</ul>
+	</section>
+	<section class="slide" id="lucky-3">
+		<h2>node.js</h2>
+		<img src="imgs/nodejs-logo.png" style="background-color:#000"/>
+		<h3>Goal: event-based concurrency</h3>
+			<pre style="prettyprint"><code>
+var http = require('http');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello World\n');
+}).listen(1337, "127.0.0.1");
+console.log('Server running at http://127.0.0.1:1337/');
+			</code></pre>
+			<pre style="prettyprint"><code>
+var net = require('net');
+
+var server = net.createServer(function (socket) {
+  socket.write("Echo server\r\n");
+  socket.pipe(socket);
+});
+
+server.listen(2337, "127.0.0.1");
+			</code></pre>
+	</section>
+	<section class="slide" id="lucky-4">
+		<h2>RingoJS</h2>
+		<img src="imgs/ringojs.png"/>
+		<h3>Goal: server-side JavaScript</h3>
+		<h3><a href="http://ringojs.org/" target="_blank">http://ringojs.org/</a>
+	</section>
+	<section class="slide" id="lucky-5">
+		<h2>jQuery</h2>
+		<img src="imgs/JQuery_logo_color_onwhite-300x74.png"/>
+		<h3>A new kind of JavaScript Library.</h3>
+	</section>
+	<section class="slide" id="lucky-6">
+		<h2>jQuery Mobile</h2>
+		<h3>Goal: Mobile Web Apps Development made Easy</h3>
+		<h3>Demo: <a href="http://jquerymobile.com/demos/1.0/" target="_blank">http://jquerymobile.com/demos/1.0/</a>
+		<img src="imgs/jquery-mobile-devices-beta.png"/>
+	</section>
+	<!-- }}} -->
+
+	<!-- {{{ References -->
+	<section class="slide" id="ref">
+		<h2>Other Resources</h2>
+		<ul>
+			<li>Google's HTML5 Presentation: <a href="http://slides.html5rocks.com/" target="_blank">http://slides.html5rocks.com/</a></li>
+			<li>HTML5 Rocks: <a href="http://www.html5rocks.com/en/" target="_blank">http://www.html5rocks.com/en/</a></li>
+		</ul>
+	</section>
+	<!-- }}} -->
+
+	<!-- {{{ thankyou -->
+	<section class="slide" id="thanks">
+		<h2>Thank you, folks!</h2>
+	</section>
+	<!-- }}} -->
+
+	<!-- {{{ misc -->
+	<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+	<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+	<p class="deck-status">
+		<span class="deck-status-current"></span>
+		/
+		<span class="deck-status-total"></span>
+	</p>
+
+	<form action="." method="get" class="goto-form">
+		<label for="goto-slide">Go to slide:</label>
+		<input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+		<datalist id="goto-datalist"></datalist>
+		<input type="submit" value="Go">
+	</form>
+
+	<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+	<!-- }}} -->
+</article>
+
+<footer>
+	<p>$Version d795b3a1 $, Powered by <a href="http://imakewebthings.github.com/deck.js/">deck.js</a></p>
+</footer>
+
+<!-- Grab CDN jQuery, with a protocol relative URL; fall back to local if offline -->
+<!-- <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script> -->
+<script>window.jQuery || document.write('<script src="jquery-1.7.min.js"><\/script>')</script>
+
+<!-- {{{ deck.js Core and extensions -->
+<script src="deck.js/core/deck.core.js"></script>
+<script src="deck.js/extensions/hash/deck.hash.js"></script>
+<script src="deck.js/extensions/menu/deck.menu.js"></script>
+<script src="deck.js/extensions/goto/deck.goto.js"></script>
+<script src="deck.js/extensions/status/deck.status.js"></script>
+<script src="deck.js/extensions/navigation/deck.navigation.js"></script>
+<script src="deck.js/extensions/coderdeck/coderdeck.js"></script>
+<!-- }}} -->
+
+<!-- Specific to this page -->
+<script src="index.js"></script>
+
+</body>
+</html>
+
+<!-- vim: set filetype=html tabstop=4 autoindent smartindent fdm=marker: -->
